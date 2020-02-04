@@ -16,7 +16,7 @@ include("dataKernal.jl");       #forward model
 include("conjugateGrad.jl");    #cg solver
 
 #point to a 1D npy file of gravity measurments
-gravity_data=npzread("bougeir.npy"); #reduced, check units!
+gravity_data=npzread("sample_gravity_data.npy"); #reduced, check units!
 
 #SET MODEL PARAMETERS
 DEPTH = 30; LENGTH = 200; #number of voxels
