@@ -1,5 +1,5 @@
-#Julia 1.10
-#Generate the Data Kernel "G" for the 2D Gravity Inversion
+# Julia 1.10
+# Generate the Data Kernel "G" for the 2D Gravity Inversion
 # Based on Potential Theory in Gravity and Magnetic Applications
 # By Richard J. Blakely
 # using NPZ
