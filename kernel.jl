@@ -48,19 +48,19 @@ function return_CellularResponse(x_stat, z_stat, xcorn, zcorn)
 return (2 * γ * Σ * 1e8)
 end
 
-function generate_Kernal(M, z_stations, x_mult, z_mult)
-    #assumes that every column has a station in the center of it
+function generateKernal(M, z_stations, x_mult, z_mult)
+    # Assumes that every column has a station in the center of it
     N = Int16(size(z_stations)[1]);
     z_max = Int16(M / N);
 
-    #Set up a G
+    # Set up a G
     G = zeros(N, M);
 
-    #make N numbered x by z model spaces
+    # Make N numbered x by z model spaces
     model_space = Array{Float64}(zeros(N, z_max, N));
     print("(dataKernel.jl) the model is ", z_max, " by ", N);
 
-    #go through and calculate gi of each cell within each model_space
+    # Go through and calculate g_i of each cell within each model_space
     for i in 1:N             #all models; at each column
         for j in 1:N         #all columns
             for k in 1:z_max #all rows
