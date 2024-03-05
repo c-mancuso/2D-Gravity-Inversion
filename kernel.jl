@@ -66,7 +66,7 @@ function generateKernel(M, z_stations, x_mult, z_mult)
             for k in 1:z_max #all rows
                 xcorners = [((j * x_mult) - x_mult), (j * x_mult), (j * x_mult), ((j * x_mult) -x_mult)];
                 zcorners = [((k * z_mult) - z_mult), ((k * z_mult) - z_mult), (k * z_mult), (k * z_mult)];
-                model_space[i,k,j] = return_CellularResponse((i * x_mult) - (x_mult / 2), z_stations[i], xcorners, zcorners);
+                model_space[i,k,j] = returnCellularResponse((i * x_mult) - (x_mult / 2), z_stations[i], xcorners, zcorners);
             end
         end
         G[i,:] .= Iterators.flatten(transpose(model_space[i,:,:]));
