@@ -58,7 +58,7 @@ function generateKernal(M, z_stations, x_mult, z_mult)
 
     # Make N numbered x by z model spaces
     model_space = Array{Float64}(zeros(N, z_max, N));
-    print("(dataKernel.jl) the model is ", z_max, " by ", N);
+    print("(kernel.jl) the model is ", z_max, " by ", N);
 
     # Go through and calculate g_i of each cell within each model_space
     for i in 1:N             #all models; at each column
