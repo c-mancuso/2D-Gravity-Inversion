@@ -3,7 +3,7 @@
 # Based on Potential Theory in Gravity and Magnetic Applications
 # By Richard J. Blakely
 # using NPZ
-function return_CellularResponse(x_stat, z_stat, xcorn, zcorn)
+function returnCellularResponse(x_stat, z_stat, xcorn, zcorn)
     γ = 6.67408e-11; # gravitational constant in m3 kg-1 s-2
     Σ = 0;
 
@@ -48,7 +48,7 @@ function return_CellularResponse(x_stat, z_stat, xcorn, zcorn)
 return (2 * γ * Σ * 1e8)
 end
 
-function generateKernal(M, z_stations, x_mult, z_mult)
+function generateKernel(M, z_stations, x_mult, z_mult)
     # Assumes that every column has a station in the center of it
     N = Int16(size(z_stations)[1]);
     z_max = Int16(M / N);
