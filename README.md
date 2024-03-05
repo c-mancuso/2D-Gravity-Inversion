@@ -9,3 +9,6 @@ and M. Ashtari Jafari. (2014)
 
 Outputs a numpy file for plotting in Python, but that can easily be
 modified for whatever is suitable.
+
+# Access on Binder
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/c-mancuso/my-first-binder/HEAD)
