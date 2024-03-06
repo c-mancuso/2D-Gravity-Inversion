@@ -4,6 +4,16 @@
 # By Richard J. Blakely
 # using NPZ
 function returnCellularResponse(x_stat, z_stat, xcorn, zcorn)
+    """ returnCellularResponse()
+    Estimate the force of gravity from a discrete rectanglar prism at some relative position.
+    Returns -> Float
+        
+    Args:
+        x_stat: location of observation station on x axis
+        y_stat: location of observation station on z axis
+        xcorn: (Array) of corners of model cell on x axis
+        ycorn: (Array) of corners of model cell on z axis
+    """
     γ = 6.67408e-11; # gravitational constant in m3 kg-1 s-2
     Σ = 0;
 
@@ -49,6 +59,16 @@ return (2 * γ * Σ * 1e8)
 end
 
 function generateKernel(M, z_stations, x_mult, z_mult)
+    """ generateKernel()
+    Generate a sensitivity matrix for linear inversion
+    Returns -> Matrix(Float)
+
+    Args:
+        M: M Rows
+        z_stations: Elevation of stations away from model surface
+        x_mult: (Array) of locations of corners of cells along x axis
+        z_mult: (Array) of locations of corners of cells along z axis
+    """
     # Assumes that every column has a station in the center of it
     N = Int16(size(z_stations)[1]);
     z_max = Int16(M / N);
